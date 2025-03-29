@@ -1,5 +1,4 @@
-# Student Registration Form - README
-
+# Student Registration Form
 ## Project Overview
 This project is a **Student Registration Form** designed using HTML, CSS, and JavaScript. The form allows users to enter their details such as name, email, password, gender, date of birth, and contact number while ensuring proper validation.
 
