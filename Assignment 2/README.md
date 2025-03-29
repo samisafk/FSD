@@ -1,4 +1,4 @@
-# Responsive Registration Form - README
+# Responsive Registration Form
 
 ## Project Overview
 This project is a **Responsive Registration Form** designed with HTML, CSS, and JavaScript. The form allows users to enter personal details, including their name, email, password, date of birth, gender, and country. Additionally, users can upload a profile picture.
@@ -42,7 +42,3 @@ This project is a **Responsive Registration Form** designed with HTML, CSS, and 
 - `<script>` - JavaScript validation logic.
 - `<style>` - CSS styles.
 
-## Future Enhancements
-- Implement **server-side validation** to enhance security.
-- Add **error messages** next to input fields for better UX.
-- Use **CSS frameworks** like Bootstrap for improved responsiveness.
