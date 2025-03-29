@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+            width: 350px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label>First Name:</label>
+            <input type="text" id="firstName">
+            <span class="error" id="firstNameError"></span>
+            
+            <label>Last Name:</label>
+            <input type="text" id="lastName">
+            <span class="error" id="lastNameError"></span>
+            
+            <label>Email:</label>
+            <input type="email" id="email">
+            <span class="error" id="emailError"></span>
+            
+            <label>Password:</label>
+            <input type="password" id="password">
+            <span class="error" id="passwordError"></span>
+            
+            <button type="submit" class="button">Register</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+            
+            let firstName = document.getElementById("firstName").value.trim();
+            let lastName = document.getElementById("lastName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            
+            document.getElementById("firstNameError").innerText = "";
+            document.getElementById("lastNameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+            
+            if (firstName === "") {
+                document.getElementById("firstNameError").innerText = "First name is required";
+                isValid = false;
+            }
+            if (lastName === "") {
+                document.getElementById("lastNameError").innerText = "Last name is required";
+                isValid = false;
+            }
+            if (email === "" || !email.includes("@")) {
+                document.getElementById("emailError").innerText = "Valid email is required";
+                isValid = false;
+            }
+            if (password.length < 8) {
+                document.getElementById("passwordError").innerText = "Password must be at least 8 characters long";
+                isValid = false;
+            }
+            
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+        });
+    </script>
+</body>
+</html>
