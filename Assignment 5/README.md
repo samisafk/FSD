@@ -21,10 +21,6 @@ cd FSD/assignment-5
 
 ### Open `index.html` in a web browser.
 
-## File Structure
-- `index.html` - Contains the structure of the form  
-- `style.css` (if extracted) - Defines the styling for the form  
-- `script.js` (if extracted) - Handles form validation logic  
 
 ## Running the Application
 1. Open `index.html` in a web browser.  
